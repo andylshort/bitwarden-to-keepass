@@ -3,6 +3,7 @@ services:
     build: .
     command: ["/bin/bash", "entrypoint.sh"]
     volumes:
+      - .:/bitwarden-to-keepass
       - ./exports:/exports
       - 'bw-config:/root/.config/Bitwarden CLI'
     env_file:
